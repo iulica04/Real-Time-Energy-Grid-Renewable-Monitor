@@ -10,6 +10,15 @@ docker exec kafka-1 kafka-topics --bootstrap-server kafka-1:9092 --list
 
 echo "Describing topic"
 
-docker exec kafka-1 kafka-topics --bootstrap-server kafka-1:9092 --describe --topic energy.production
+docker exec -it kafka-1 kafka-topics --bootstrap-server kafka-1:9092 --describe --topic energy.consumption
 
-echo "Done!"
+echo "Listing all topics:"
+docker exec kafka-1 kafka-topics --bootstrap-server kafka-1:9092 --list
+
+echo "Topic details for energy.production:"
+docker exec kafka-1 kafka-topics  --bootstrap-server kafka-1:9092 --describe --topic energy.production
+
+echo "Topic details for energy.consumption:"
+docker exec kafka-1 kafka-topics --bootstrap-server kafka-1:9092 --describe --topic energy.consumption
+
+echo "Topics created successfully!"
