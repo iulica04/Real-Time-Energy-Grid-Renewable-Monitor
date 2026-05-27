@@ -55,6 +55,9 @@ CONS_HEADERS = [
     "spot_price_eur_mwh", "demand_level"
 ]
 
+SOLAR_CAPACITY_MW = 1000
+WIND_CAPACITY_MW = 1000
+
 # Buffere pentru batch write (evită I/O la fiecare mesaj)
 prod_buffer = []
 cons_buffer = []
@@ -71,6 +74,17 @@ def write_batch(buffer: list, headers: list, filepath: str):
         if not file_exists:
             writer.writeheader()
         writer.writerows(buffer)
+
+def normalize_production_record(data: dict, zone: str) -> dict:
+    solar_mw = float(data.get("solar_mw") or 0)
+    wind_mw = float(data.get("wind_mw") or 0)
+
+    return {
+        **data,
+        "zone": data.get("zone") or data.get("country_zone") or zone,
+        "solar_capacity_factor": round((solar_mw / SOLAR_CAPACITY_MW) * 100, 2),
+        "wind_capacity_factor": round((wind_mw / WIND_CAPACITY_MW) * 100, 2),
+    }
 
 # ─── Main consumer loop ───────────────────────────────────────────────────────
 
@@ -114,7 +128,7 @@ def run_consumer():
                   f"partition={msg.partition()} offset={msg.offset()}")
 
             if topic == "energy.production":
-                prod_buffer.append(data)
+                prod_buffer.append(normalize_production_record(data, zone))
                 if len(prod_buffer) >= BATCH_SIZE:
                     write_batch(prod_buffer, PROD_HEADERS, get_sink_path("production"))
                     prod_buffer.clear()
