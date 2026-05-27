@@ -437,3 +437,11 @@
 {"alert_level": "MEDIUM", "zone": "FR", "timestamp": "2026-05-27T11:39:36.600573+00:00", "spot_price_eur_mwh": 105.39, "consumption_mw": 65400.0, "demand_level": "HIGH", "kafka_partition": 0, "kafka_offset": 64}
 {"alert_level": "MEDIUM", "zone": "PL", "timestamp": "2026-05-27T11:39:37.160114+00:00", "spot_price_eur_mwh": 109.12, "consumption_mw": 23600.0, "demand_level": "HIGH", "kafka_partition": 0, "kafka_offset": 65}
 {"alert_level": "HIGH", "zone": "RO", "timestamp": "2026-05-27T11:40:10.107160+00:00", "spot_price_eur_mwh": 124.94, "consumption_mw": 8030.0, "demand_level": "HIGH", "kafka_partition": 0, "kafka_offset": 66}
+{"alert_level": "HIGH", "zone": "RO", "timestamp": "2026-05-27T13:22:09.225847+00:00", "spot_price_eur_mwh": 125.89, "consumption_mw": 8030.0, "demand_level": "HIGH", "kafka_partition": 0, "kafka_offset": 67}
+{"alert_level": "MEDIUM", "zone": "DE", "timestamp": "2026-05-27T13:22:11.169939+00:00", "spot_price_eur_mwh": 114.6, "consumption_mw": 71600.0, "demand_level": "HIGH", "kafka_partition": 1, "kafka_offset": 22}
+{"alert_level": "MEDIUM", "zone": "FR", "timestamp": "2026-05-27T13:22:12.546900+00:00", "spot_price_eur_mwh": 86.6, "consumption_mw": 65400.0, "demand_level": "HIGH", "kafka_partition": 0, "kafka_offset": 68}
+{"alert_level": "MEDIUM", "zone": "PL", "timestamp": "2026-05-27T13:22:13.944121+00:00", "spot_price_eur_mwh": 109.31, "consumption_mw": 23600.0, "demand_level": "HIGH", "kafka_partition": 0, "kafka_offset": 69}
+{"alert_level": "HIGH", "zone": "RO", "timestamp": "2026-05-27T13:22:44.590992+00:00", "spot_price_eur_mwh": 125.89, "consumption_mw": 8030.0, "demand_level": "HIGH", "kafka_partition": 0, "kafka_offset": 70}
+{"alert_level": "MEDIUM", "zone": "DE", "timestamp": "2026-05-27T13:22:45.212994+00:00", "spot_price_eur_mwh": 114.6, "consumption_mw": 71600.0, "demand_level": "HIGH", "kafka_partition": 1, "kafka_offset": 23}
+{"alert_level": "MEDIUM", "zone": "FR", "timestamp": "2026-05-27T13:22:45.802299+00:00", "spot_price_eur_mwh": 86.6, "consumption_mw": 65400.0, "demand_level": "HIGH", "kafka_partition": 0, "kafka_offset": 71}
+{"alert_level": "MEDIUM", "zone": "PL", "timestamp": "2026-05-27T13:22:46.406465+00:00", "spot_price_eur_mwh": 109.31, "consumption_mw": 23600.0, "demand_level": "HIGH", "kafka_partition": 0, "kafka_offset": 72}
